@@ -8,6 +8,7 @@ import datetime
 import wolframalpha
 import os
 import sys
+import pywhatkit
 
 engine = pyttsx3.init('sapi5')
 
@@ -111,6 +112,11 @@ if __name__ == '__main__':
         elif 'bye' in query:
             speak('Bye Sir, have a good day.')
             sys.exit()
+            
+        
+        elif "send message to asad" in query:
+            speak("sending message...")
+            kit.sendwhatmsg("person's phone no.","your message",19,18)    
                                     
         elif 'play music' in query:
             music_folder = Your_music_folder_path
